@@ -24,6 +24,15 @@ namespace Curso1DesignPatterns
 
             calculador.RealizaCalculo(orcamento, icms);
 
+            CalculadorDeDescontos calculadorDesconto = new CalculadorDeDescontos();
+
+            orcamento.AdicionarItem(new Item("Caneta", 500));
+            orcamento.AdicionarItem(new Item("Lapis", 500));
+
+            double desconto = calculadorDesconto.Calcula(orcamento);
+            Console.WriteLine(desconto);
+
+
             Console.ReadKey();
         }
     }

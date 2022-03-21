@@ -9,10 +9,17 @@ namespace Curso1DesignPatterns
     public class Orcamento
     {
         public double Valor { get; set; }
+        public IList<Item> Itens { get; private set; }
 
         public Orcamento(double valor)
         {
-            Valor = valor;
+            this.Valor = valor;
+            this.Itens = new List<Item>();
+        }
+
+        public void AdicionarItem(Item item)
+        {
+            Itens.Add(item);
         }
     }
 }
