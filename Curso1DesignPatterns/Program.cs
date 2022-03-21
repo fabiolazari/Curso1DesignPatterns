@@ -26,8 +26,12 @@ namespace Curso1DesignPatterns
 
             CalculadorDeDescontos calculadorDesconto = new CalculadorDeDescontos();
 
-            orcamento.AdicionarItem(new Item("Caneta", 500));
-            orcamento.AdicionarItem(new Item("Lapis", 500));
+            orcamento.AdicionarItem(new Item("Caneta", 250));
+            orcamento.AdicionarItem(new Item("Lapis", 250));
+            orcamento.AdicionarItem(new Item("Geladeira", 250));
+            orcamento.AdicionarItem(new Item("Fogão", 250));
+            orcamento.AdicionarItem(new Item("Microondas", 250));
+            orcamento.AdicionarItem(new Item("Xbox", 250));
 
             double desconto = calculadorDesconto.Calcula(orcamento);
             Console.WriteLine(desconto);
